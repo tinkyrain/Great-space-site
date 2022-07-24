@@ -2,23 +2,40 @@
   margin: 0;
 }
 
+.body_hide {
+	opacity: 0;
+	transition: .9s opacity ease-in-out;
+}
+
+.body_visible {
+	opacity: 1;
+}
+
 main{
   height: 100vh;
   width: 100%;
+
+  background: black;
 }
 
 .photo{
   width: 100%;
   height: 100%;
+  position: absolute;
 }
 
 .info{
-  background-color: white;
+  position: absolute;
+
+  z-index: 999;
+
+  background: rgba(0,0,0, 0.7);
 
   width: 100%;
   height: 100vh;
 
   font-family: 'Quicksand', sans-serif;
+  color: white;
 
   display: flex;
   align-items: center;
