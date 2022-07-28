@@ -1,7 +1,7 @@
 const info_section = document.getElementById('info');
 const info_h2 = document.getElementById('info__h2');
 const info_text = document.getElementById('info__text');
-const photo = document.getElementById('photo');
+const photo = document.getElementById('body');
 const eye = document.getElementById('eye');
 
 let hiding = false;
@@ -19,7 +19,7 @@ async function getData(){
 
   info_h2.innerText = data.title;
   info_text.innerText = data.explanation;
-  photo.src = data.hdurl;
+  photo.style.backgroundImage = `url(${data.hdurl})`;
 }
 
 function hidingInfo(){
